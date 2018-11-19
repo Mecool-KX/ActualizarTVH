@@ -1,4 +1,4 @@
-# ActualizarEPG
+# ActualizarTVH
 
 ## Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en LibreELEC/CoreELEC
 
