@@ -9,4 +9,4 @@ Para simplificar:
 
 iniciar sesión por ssh y copiar esta línea entera
 
-wget https://raw.githubusercontent.com/Mecool-KX/Tunel-Proxy/master/ActualizarEPG.sh ; chmod +x ActualizarEPG.sh ; ./ActualizarEPG.sh
+wget https://raw.githubusercontent.com/Mecool-KX/ActualizarEPG/master/ActualizarTVH.sh ; chmod +x ActualizarTVH.sh ; ./ActualizarTVH.sh
