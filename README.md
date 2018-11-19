@@ -1,0 +1,12 @@
+# ActualizarEPG
+Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en LibreELEC/CoreELEC
+
+Iniciar sesión por SSH
+Descargar el script
+Dar permisos de ejecución
+Ejecutar el script
+Para simplificar:
+
+iniciar sesión por ssh y copiar esta línea entera
+
+wget https://raw.githubusercontent.com/Mecool-KX/Tunel-Proxy/master/ActualizarEPG.sh ; chmod +x ActualizarEPG.sh ; ./ActualizarEPG.sh
