@@ -1,6 +1,6 @@
 # ActualizarEPG
 
-##Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en LibreELEC/CoreELEC
+## Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en LibreELEC/CoreELEC
 
 Iniciar sesión por SSH
 Descargar el script
