@@ -8,7 +8,9 @@
 
 Iniciar sesión por ssh y ejecutar esta línea entera:
 
-**wget -sO .\ActualizarTVH.sh https://goo.gl/z7MNyy ; chmod +x ActualizarTVH.sh ; ./ActualizarTVH.sh -UI ; rm ActualizarTVH.sh**
+**wget -qO ./ActualizarTVH.sh https://goo.gl/z7MNyy ; chmod +x ./ActualizarTVH.sh ; ./ActualizarTVH.sh -UI ; rm ./ActualizarTVH.sh**
+
+
 
 **INFORMACIÓN**
 
