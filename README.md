@@ -10,6 +10,7 @@ Iniciar sesión por ssh y ejecutar esta línea entera:
 
 **wget https://raw.githubusercontent.com/Mecool-KX/ActualizarTVH/master/ActualizarTVH.sh ; chmod +x ActualizarTVH.sh ; ./ActualizarTVH.sh -UI**
 
+**INFORMACIÓN**
 
 Si se lanza el script sin parámetros se ejecuta automáticamente la actualización de la guía.(Preparado para lanzarlo desde LE/CE)<br/>
 **NOTA:** Se hace una backup de la carpeta de TVH y machacará el anterior si lo hubiera.
