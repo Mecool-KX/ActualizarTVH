@@ -30,7 +30,6 @@ function ChequearActualizacion() {
 		# El fichero se ha descargado bien. Comprobamos que las versiones sean iguales
 		ver_web=`cat /tmp/$ACTUALIZACION_VER 2>/dev/null`
 		ver_local=`cat $CARPETA_DESCARGA/$ACTUALIZACION_VER 2>/dev/null`
-		clear
 		if [ "$ver_web" != "$ver_local" ]; then
 			# Hay una diferencia de versiones. Descargamos la información de la versión web para mostrarla
 			cambios=$(curl -s ${ACTUALIZACION_URL}changes_${ver_web}.txt)
@@ -360,7 +359,6 @@ function MostrarAyuda() {
 #
 function CuentaAtras() {
 
-	clear
 	echo "Pulsa Ctrl+C para abortar"
 	secs=$2
 	while [ $secs -gt 0 ]; do
@@ -376,9 +374,8 @@ function CuentaAtras() {
 #
 #!/bin/bash
 
+clear
 write_header "********  Actualización TVH de NormandyEPG  *********"
-pause
-
 
 if [ $HOSTNAME != "LibreELEC" ] &&  [ $HOSTNAME != "CoreELEC" ];then
 	MostrarError "Este script solo se puede ejecutar en LibreELEC o CoreELEC" 
