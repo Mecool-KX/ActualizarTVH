@@ -30,7 +30,6 @@ function ChequearActualizacion() {
 		# El fichero se ha descargado bien. Comprobamos que las versiones sean iguales
 		ver_web=`cat /tmp/$ACTUALIZACION_VER 2>/dev/null`
 		ver_local=`cat $CARPETA_DESCARGA/$ACTUALIZACION_VER 2>/dev/null`
-		#echo "Versión web: $ver_web  <------> Versión local: $ver_local"
 		clear
 		if [ "$ver_web" != "$ver_local" ]; then
 			# Hay una diferencia de versiones. Descargamos la información de la versión web para mostrarla
@@ -214,7 +213,7 @@ function BorramosDatosTVH(){
 # Mandar un mensaje a Kodi
 function MessageToKodi() {
 
-	if [ $2 == "" ]; then # Si nos pasan un según parámetro son los milisegundos que quieren 
+	if [ "$#" -eq 0 ]; then # Si nos pasan un según parámetro son los milisegundos que quieren 
 		kodi-send -a "Notification($NOMBRE_APP,$1, 5000)" >/dev/null
 	else
 		kodi-send -a "Notification($NOMBRE_APP,$1,$2)" >/dev/null
@@ -377,6 +376,10 @@ function CuentaAtras() {
 #
 #!/bin/bash
 
+write_header "********  Actualización TVH de NormandyEPG  *********"
+pause
+
+
 if [ $HOSTNAME != "LibreELEC" ] &&  [ $HOSTNAME != "CoreELEC" ];then
 	MostrarError "Este script solo se puede ejecutar en LibreELEC o CoreELEC" 
 fi
@@ -424,3 +427,6 @@ fi
 
 #
 exit 0
+
+
+
