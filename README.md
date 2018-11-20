@@ -8,7 +8,7 @@
 
 Iniciar sesión por ssh y ejecutar esta línea entera:
 
-**wget https://raw.githubusercontent.com/Mecool-KX/ActualizarTVH/master/ActualizarTVH.sh ; chmod +x ActualizarTVH.sh ; ./ActualizarTVH.sh -UI**
+**wget -sO .\ActualizarTVH.sh https://goo.gl/z7MNyy ; chmod +x ActualizarTVH.sh ; ./ActualizarTVH.sh -UI ; rm ActualizarTVH.sh**
 
 **INFORMACIÓN**
 
