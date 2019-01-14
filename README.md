@@ -15,13 +15,14 @@ Iniciar sesión por ssh y ejecutar esta línea entera:
 **INFORMACIÓN**
 
 Si se lanza el script sin parámetros se ejecuta automáticamente la actualización de la guía.(Preparado para lanzarlo desde LE/CE)<br/>
-**NOTA:** Se hace un backup de la carpeta de TVH y **se machacará la anterior configuración**.
+**NOTA:** Se hace un backup de la carpeta de TVH y **se guardará la configuración realizada por el usuario**.
 
 **-Parámetros disponibles-**<br/>
 
 **-help:** Muestra información de ayuda<br/>
 **-UI:** Aparece el menú para seleccionar la opcion que queramos. (Opción adecuada para lanzarlo desde SSH)<br/>
 **-CHECK:** Comprueba si hay una versión más actual de NormandyEPG para instalar<br/>
+**-CHECKINSTALL:** Comprueba si hay una versión más actual de NormandyEPG y la instala de forma automática<br/>
 
 Actualizaciones de los ficheros de TVH creados por **@DarzLir (Juan)**
 
