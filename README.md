@@ -24,6 +24,8 @@ Si se lanza el script sin parámetros se ejecuta automáticamente la actualizaci
 **-CHECK:** Comprueba si hay una versión más actual de NormandyEPG para instalar<br/>
 **-CHECKINSTALL:** Comprueba si hay una versión más actual de NormandyEPG y la instala de forma automática<br/>
 
+**NOTA:** Desde la última versión, si se hacen cambios en los canales de TVH, como añadir TDT o modificar algún canal, esos canales no serán machacados con la actualización.
+
 Actualizaciones de los ficheros de TVH creados por **@DarzLir (Juan)**
 
 http://nyes.duckdns.org/wordpress/insertar-epglista-de-canales-en-tvheadend-bajo-coreelec-libreelec/
