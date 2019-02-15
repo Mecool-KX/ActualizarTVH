@@ -78,7 +78,7 @@ do
 		MostrarMensaje "Actualizamos la guía de modo silencioso" "WHITE"
 	fi
 	case $opcion in
-		r|R|a|A|s|S)
+		r|R|a|A)
 		
 		# Creamos la carpeta de descarga de la actualización
 		mkdir -p "$CARPETA_DESCARGA"
