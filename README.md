@@ -24,7 +24,7 @@ Iniciar sesión por ssh y ejecutar esta línea entera:
 
 - Desde la última versión, mediante el interfaz de usuario, se da la opción de borrar toda la configuración para hacer una instalación limpia, o de actualizar solo los cambios
 
-- Si al ejecutar la línea no aparece ningún mensaje, es posible que se deba a que tenemos instalada la versión wget de Entware. Para que funcione, podemos desinstalar Entware o añadir el parámetro **--no-check-certificate** después de **-qO**
+- Si al ejecutar la línea no aparece ningún mensaje, es posible que se deba a que tenemos instalada la versión wget de Entware. Para que funcione, podemos desinstalar Entware o añadir el parámetro **--no-check-certificate** antes de **-qO**
 
 Actualizaciones de los ficheros de TVH creados por **@DarzLir (Juan)**
 
