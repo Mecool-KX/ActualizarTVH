@@ -465,14 +465,12 @@ function MostrarMensaje() {
 #
 function MostrarAyuda() {
 	
-	echo  -e "\nUso: ActualizarTVH [-ACTUALIZA] [-CHECK] [-CHECKINSTALL] [-UI] [-help]"
+	echo  -e "\nUso: ActualizarTVH [-ACTUALIZA] [-CHECK] [-CHECKINSTALL] [-help]"
 	echo  "Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en LibreELEC/CoreELEC"
 	echo  "Uso:"
-	echo  "	(Sin parámetros)   Instalación automática (no borra configuraciones particulares)"
 	echo  "	-ACTUALIZA         Actualización desatendida. Lo mismo que lanzar el script sin parámetros"
 	echo  "	-CHECK             Comprueba si hay actualización disponible"
 	echo  "	-CHECKINSTALL      Comprueba si hay actualización disponible, y si la hay, la instala"
-	echo  "	-UI                Menú interactivo de instalación"
 	echo  "	-help              Muestra esta informción"
 
 }
@@ -533,14 +531,6 @@ if [[ $# -eq 1 ]]; then
 		-CHECKINSTALL) # Chequeamos si hay nueva versión, y si la hay la instalamos de modo automático
 			ChequearInstalar;;
 			
-		-UI) # Mostramos el menú
-
-			while true
-			do
-				Show_menu  # accede al menú 
-				Read_input # espera la respuesta del usuario
-			done
-			;;
 		*) # Error en el parámetro introducido
 			MostrarAyuda;
 			;;
@@ -549,8 +539,13 @@ if [[ $# -eq 1 ]]; then
 else
 
 	if [ $# -eq 0 ]; then
-		# Lanzamos la actualización automática
-		ActualizarGuia "NO_UI"
+		# Lanzamos el menú
+		while true
+		do
+			Show_menu  # accede al menú 
+			Read_input # espera la respuesta del usuario
+		done
+
 	else
 		# Más de un parámetro
 		 MostrarAyuda
