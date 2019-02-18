@@ -1,6 +1,6 @@
 # ActualizarTVH
 
-## Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en LibreELEC/CoreELEC
+## Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en CoreELEC
 
 ![alt text](https://raw.githubusercontent.com/Mecool-KX/ActualizarTVH/master/ActualizarTVH.png)
 
