@@ -20,6 +20,8 @@ Iniciar sesión por ssh y ejecutar esta línea entera:
 
 **NOTA:** Si se hacen cambios en los canales de TVH, como añadir TDT o modificar algún canal, esos canales no serán machacados con la actualización.
 
+Desde la última versión, mediante el interfaz de usuario, se da la opción de borrar toda la configuración para hacer una instalación limpia, o de actualizar solo los cambios
+
 Actualizaciones de los ficheros de TVH creados por **@DarzLir (Juan)**
 
 https://normandy.es/
