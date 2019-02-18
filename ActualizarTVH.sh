@@ -6,7 +6,9 @@
 
 # Definición de variables
 NOMBRE_APP="NormandyEPG"
-ACTUALIZACION_URL="https://raw.githubusercontent.com/NormandyEPG/TvH-ListaMovistar/master/"
+ACTUALIZACION_URL=""
+ACTUALIZACION_URL_PROD="https://raw.githubusercontent.com/NormandyEPG/TvH-ListaMovistar/master/"
+ACTUALIZACION_URL_DEBUG="https://normandy.es/TvH/"
 ACTUALIZACION_TAR="NormandyEPG.tar"
 ACTUALIZACION_VER="NormandyEPG.ver"
 CARPETA_DESCARGA="/storage/.kodi/NormandyEPG"
@@ -106,7 +108,6 @@ do
 			fi
 			
 			#Borramos datos de TVH
-			MostrarMensaje "Borramos los datos de TVH"
 			if [ "$#" -eq 0 ]; then
 				if [ $opcion = "R" ]; then
 					# Borrado completo
@@ -300,6 +301,7 @@ carpeta_tag="$CARPETA_TVH/channel/tag/*"
 #			borrar_todo=true
 #		fi
 #	fi
+	MostrarMensaje "Borramos los datos de TVH $1"
 	
 	rm -rf "$CARPETA_PICONS"
 
@@ -492,6 +494,16 @@ function CuentaAtras() {
 
 }
 
+# Función para lanzar el menú principal
+function MenuPrincipal() {
+
+	while true
+	do
+		Show_menu  # accede al menú 
+		Read_input # espera la respuesta del usuario
+	done
+}
+
 #
 # Principal
 #
@@ -503,6 +515,8 @@ rm -f "$CARPETA_DESCARGA/$ACTUALIZACION_TAR"
 
 # Comprobamos si tenemos instalado el wget-ssl
 [ -f /storage/.opt/bin/wget ] && ncert="--no-check-certificate"
+
+ACTUALIZACION_URL=$ACTUALIZACION_URL_PROD
 
 clear
 write_header "********  Actualización TVH de NormandyEPG  *********"
@@ -522,15 +536,22 @@ if [[ $# -eq 1 ]]; then
 		-help) # Mostramos la información del programa
 			MostrarAyuda;
 			;;
-		-ACTUALIZA) # Actualizamos. Igual que si ejecutamos el script sin parámetros
+		-ACTUALIZA|-actualiza) # Actualizamos. Igual que si ejecutamos el script sin parámetros
 			ActualizarGuia "NO_UI";;
 			
-		-CHECK) # Chequeamos a ver si hay actualización disponible
+		-CHECK|-check) # Chequeamos a ver si hay actualización disponible
 			ChequearActualizacion;;
 			
-		-CHECKINSTALL) # Chequeamos si hay nueva versión, y si la hay la instalamos de modo automático
+		-CHECKINSTALL|-checkinstall) # Chequeamos si hay nueva versión, y si la hay la instalamos de modo automático
 			ChequearInstalar;;
 			
+		-DEBUG|-debug) # No documentado. Para utilizar el servidor de pruebas
+		
+			ACTUALIZACION_URL=$ACTUALIZACION_URL_DEBUG
+			
+			# Lanzamos el menú
+			MenuPrincipal
+			;;
 		*) # Error en el parámetro introducido
 			MostrarAyuda;
 			;;
@@ -540,11 +561,7 @@ else
 
 	if [ $# -eq 0 ]; then
 		# Lanzamos el menú
-		while true
-		do
-			Show_menu  # accede al menú 
-			Read_input # espera la respuesta del usuario
-		done
+		MenuPrincipal
 
 	else
 		# Más de un parámetro
