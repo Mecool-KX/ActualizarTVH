@@ -466,9 +466,9 @@ function MostrarMensaje() {
 function MostrarAyuda() {
 	
 	echo  -e "\nUso: ActualizarTVH [-ACTUALIZA] [-CHECK] [-CHECKINSTALL] [-help]"
-	echo  "Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en LibreELEC/CoreELEC"
+	echo  "Actualización de los canales, Picons y EPG de TVHeadend para los Mecool en CoreELEC"
 	echo  "Uso:"
-	echo  "	-ACTUALIZA         Actualización desatendida. Lo mismo que lanzar el script sin parámetros"
+	echo  "	-ACTUALIZA         Actualización desatendida"
 	echo  "	-CHECK             Comprueba si hay actualización disponible"
 	echo  "	-CHECKINSTALL      Comprueba si hay actualización disponible, y si la hay, la instala"
 	echo  "	-help              Muestra esta informción"
