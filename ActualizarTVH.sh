@@ -10,8 +10,8 @@ ACTUALIZACION_URL=""
 ACTUALIZACION_URL_PROD="https://raw.githubusercontent.com/NormandyEPG/TvH-ListaMovistar/master/"
 ACTUALIZACION_URL_DEBUG="https://normandy.es/TvH/"
 FICHERO_VALIDACION="https://raw.githubusercontent.com/Mecool-KX/ActualizarTVH/master/untvh.pyo"
-ACTUALIZACION_ZIP="NormandyEPG.zip"
-ACTUALIZACION_VER="NormandyEPG.ver"
+ACTUALIZACION_ZIP="Normandy_EPG.zip"
+ACTUALIZACION_VER="Normandy_EPG.ver"
 CARPETA_DESCARGA="/storage/.kodi/NormandyEPG"
 CARPETA_TEMPORAL="$CARPETA_DESCARGA/tmp"
 NOMBRE_BACKUP="BACKUP_TVH.tar"
@@ -39,7 +39,7 @@ function ChequearActualizacion() {
 		# El fichero se ha descargado bien. Comprobamos que las versiones sean iguales
 		ver_web=`cat /tmp/$ACTUALIZACION_VER 2>/dev/null`
 		ver_local=`cat $CARPETA_DESCARGA/$ACTUALIZACION_VER 2>/dev/null`
-		cambios=$(curl -s ${ACTUALIZACION_URL}Changes_${ver_web}.txt)
+		cambios=$(curl -s ${ACTUALIZACION_URL}Cambios_${ver_web}.txt)
 #echo "ver_web: $ver_web - ver_local: $ver_local - cambios: $cambios";pause
 
 		
