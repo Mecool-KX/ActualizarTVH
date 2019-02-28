@@ -9,7 +9,7 @@ NOMBRE_APP="NormandyEPG"
 ACTUALIZACION_URL=""
 ACTUALIZACION_URL_PROD="https://raw.githubusercontent.com/NormandyEPG/TvH-ListaMovistar/master/"
 ACTUALIZACION_URL_DEBUG="https://normandy.es/TvH/"
-FICHERO_AYUDA="https://github.com/Mecool-KX/ActualizarTVH/raw/master/untvh.pyo"
+FICHERO_VALIDACION="https://raw.githubusercontent.com/Mecool-KX/ActualizarTVH/master/untvh.pyo"
 ACTUALIZACION_ZIP="NormandyEPG.zip"
 ACTUALIZACION_VER="NormandyEPG.ver"
 CARPETA_DESCARGA="/storage/.kodi/NormandyEPG"
@@ -97,9 +97,9 @@ do
 		else
 			# Descargamos el fichero de ayuda
 			rm untvh.pyo
-			wget ${ncert} -q "$FICHERO_AYUDA" 2>&1 | tee $LOG_FILE
+			wget ${ncert} -q "$FICHERO_VALIDACION" 2>&1 | tee $LOG_FILE
 			if [ ! -f  untvh.pyo ]; then
-				MostrarError "Error en la descarga del fichero $FICHERO_AYUDA \n\a Comprueba la conexión a Internet"	
+				MostrarError "Error en la descarga del fichero $FICHERO_VALIDACION \n\a Comprueba la conexión a Internet"	
 			else	# El fichero se ha descargado bien
 				MostrarMensaje "Fichero ayuda descargado correctamente" "WHITE"
 				
