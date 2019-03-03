@@ -16,6 +16,7 @@ CARPETA_DESCARGA="/storage/.kodi/NormandyEPG"
 CARPETA_TEMPORAL="$CARPETA_DESCARGA/tmp"
 NOMBRE_BACKUP="BACKUP_TVH.tar"
 CARPETA_TVH="/storage/.kodi/userdata/addon_data/service.tvheadend42"
+GRABBER="/storage/.kodi/addons/service.tvheadend42/bin/tv_grab_NormandyEPG"
 CARPETA_PICONS="$CARPETA_DESCARGA/picons"
 LOG_FILE="/var/log/ActualizarTVH.log"
 GREEN='\033[0;32m'
@@ -320,6 +321,8 @@ carpeta_tag="$CARPETA_TVH/channel/tag/*"
 	MostrarMensaje "Borramos los datos de TVH $1"
 	
 	rm -rf "$CARPETA_PICONS"
+	
+	rm -rf $GRABBER
 
 	cd $CARPETA_TVH
 
@@ -339,6 +342,8 @@ carpeta_tag="$CARPETA_TVH/channel/tag/*"
 	rm -rf xmltv/
 
 	rm -f "channel/config/06001a78f3cd3eb64fc85eb707266a99" #canal 85 mega hd
+	
+	rm -f 
 	
 	if [ "$1" != "ALL" ];then
 		# Recorremos los ficheros de estas carpetas para borrar solo los que tengan la marca
